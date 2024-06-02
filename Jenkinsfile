@@ -8,8 +8,7 @@ pipeline {
             }
 
             steps {
-                sh 'ls -lRa'
-                pwsh './script-pwsh.sh'
+                pwsh './script-pwsh.ps1'
             }
         }
 
