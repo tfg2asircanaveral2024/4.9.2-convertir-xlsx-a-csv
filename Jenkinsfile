@@ -4,7 +4,9 @@ pipeline {
     stages {
         stage ('Descargar Repositorio') {
             steps {
-                git 'https://github.com/tfg2asircanaveral2024/4.9.2-convertir-xlsx-a-csv.git'
+                dir('/var/jenkins_home/workspace-compartido') {
+                    git 'https://github.com/tfg2asircanaveral2024/4.9.2-convertir-xlsx-a-csv.git'
+                }
             }
         }
 
