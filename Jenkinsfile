@@ -2,6 +2,12 @@ pipeline {
     agent any
 
     stages {
+        stage ('Descargar Repositorio') {
+            steps {
+                git 'https://github.com/tfg2asircanaveral2024/4.9.2-convertir-xlsx-a-csv.git'
+            }
+        }
+
         stage('Convertir Ficheros') {
             agent {
                 label 'agente-pwsh-jnlp'
