@@ -8,14 +8,17 @@ pipeline {
             }
 
             steps {
-                pwsh './script-pwsh.ps1'
-                sh 'ls -Rl'
+                dir('/var/jenkins_home/workspace-compartido') {
+                    pwsh './script-pwsh.ps1'
+                }
             }
         }
 
         stage('Mostrar Ficheros') {
             steps {
-                sh 'ls -Rl'
+                dir('/var/jenkins_home/workspace-compartido') {
+                    sh 'ls -Rl'
+                }
             }
         }
     }
