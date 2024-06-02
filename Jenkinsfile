@@ -9,12 +9,13 @@ pipeline {
 
             steps {
                 pwsh './script-pwsh.ps1'
+                sh 'ls -Rl'
             }
         }
 
         stage('Mostrar Ficheros') {
             steps {
-                sh 'ls -Rla'
+                sh 'ls -Rl'
             }
         }
     }
